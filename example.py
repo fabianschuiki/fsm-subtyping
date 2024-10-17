@@ -43,7 +43,7 @@ def advance(values):
     return {
         "state": next_state,
         "arg_ready": state == 0,
-        "res_c": values["tmp_c"],
+        "res_c": tmp,
         "res_valid": (state == 4),
         "tmp_a": z3.If(start, values["arg_a"], values["tmp_a"]),
         "tmp_b": z3.If(start, values["arg_b"], values["tmp_b"]),
